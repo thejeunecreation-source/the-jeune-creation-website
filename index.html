@@ -974,15 +974,17 @@
                     mobileResourcesLinks.style.display = isHidden ? 'block' : 'none';
                     
                     // Toggle icon
-                    const icon = mobileResourcesToggle.querySelector('i');
-                    if (isHidden) {
-                        icon.outerHTML = '<i data-lucide="chevron-up" class="w-5 h-5"></i>';
-                    } else {
-                        icon.outerHTML = '<i data-lucide="chevron-down" class="w-5 h-5"></i>';
+                    const iconSpan = mobileResourcesToggle.querySelector('span'); // Get the span
+                    if (iconSpan) {
+                        if (isHidden) {
+                            iconSpan.innerHTML = '<i data-lucide="chevron-up" class="w-5 h-5"></i>';
+                        } else {
+                            iconSpan.innerHTML = '<i data-lucide="chevron-down" class="w-5 h-5"></i>';
+                        }
+                        lucide.createIcons({
+                            nodes: [iconSpan.querySelector('i')], // Create icon on the new <i> inside the span
+                        });
                     }
-                    lucide.createIcons({
-                        nodes: [mobileResourcesToggle.querySelector('i')],
-                    });
                 });
             }
 
@@ -992,4 +994,5 @@
     </script>
 </body>
 </html>
+
 
