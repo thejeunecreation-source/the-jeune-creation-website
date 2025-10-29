@@ -358,7 +358,8 @@
                 <div class="hidden md:flex items-center space-x-6">
                     <a href="#" class="nav-link page-link active" data-page="home">Home</a>
                     <a href="#" class="nav-link page-link" data-page="about">About</a>
-                    <a href="#" class="nav-link page-link" data-page="community">Community</a>
+                    <!-- Updated Community Link -->
+                    <a href="https://www.facebook.com/groups/thejeunecreation" target="_blank" rel="noopener" class="nav-link">Community</a>
                     
                     <!-- Resources Dropdown -->
                     <div class="relative dropdown">
@@ -396,7 +397,8 @@
         <div id="mobile-menu" class="mobile-menu">
             <a href="#" class="mobile-nav-link page-link" data-page="home">Home</a>
             <a href="#" class="mobile-nav-link page-link" data-page="about">About</a>
-            <a href="#" class="mobile-nav-link page-link" data-page="community">Community</a>
+            <!-- Updated Community Link -->
+            <a href="https://www.facebook.com/groups/thejeunecreation" target="_blank" rel="noopener" class="mobile-nav-link">Community</a>
             
             <!-- Mobile Resources Toggle -->
             <button id="mobile-resources-toggle" class="mobile-nav-link w-full text-left flex justify-between items-center">
@@ -411,7 +413,8 @@
             <a href="#" class="mobile-nav-link page-link" data-page="shop">Shop</a>
             <a href="#" class="mobile-nav-link page-link" data-page="collaborate">Collaborate</a>
             <a href="#" class="mobile-nav-link page-link" data-page="contact">Contact</a>
-            <a href="#" class="mobile-nav-link page-link" data-page="join">
+            <!-- Updated Join Link -->
+            <a href="https://www.facebook.com/groups/thejeunecreation" target="_blank" rel="noopener" class="mobile-nav-link">
                 <span class="px-4 py-2 bg-jc-gold text-white rounded-full">Join the JC Fam</span>
             </a>
         </div>
@@ -475,7 +478,8 @@
                             <div class="p-6">
                                 <h3 class="text-2xl font-serif font-bold mb-3">Community Love</h3>
                                 <p class="text-gray-600 mb-4">Join our free Facebook group, the AI & Canva Creators Hub, for exclusive tips and support!</p>
-                                <a href="#" data-page="community" class="page-link font-semibold text-jc-gold hover:underline">Join the Fam &rarr;</a>
+                                <!-- Updated Community Link -->
+                                <a href="https://www.facebook.com/groups/thejeunecreation" target="_blank" rel="noopener" class="font-semibold text-jc-gold hover:underline">Join the Fam &rarr;</a>
                             </div>
                         </div>
                     </div>
@@ -951,16 +955,7 @@
 
             // Mobile menu toggle
             if (mobileMenuButton) {
-                mobileMenuButton.addEventListener('click', () => {
-                    const isHidden = mobileMenu.style.display === 'none' || mobileMenu.style.display === '';
-                    mobileMenu.style.display = isHidden ? 'block' : 'none';
-                    
-                    // Toggle icon
-                    if (isHidden) {
-                        mobileMenuButton.innerHTML = '<i data-lucide="x" class="w-7 h-7"></i>';
-                    } else {
-                        mobileMenuButton.innerHTML = '<i data-lucide="menu" class="w-7 h-7"></i>';
-                    }
+// ... existing code ... -->
                     lucide.createIcons({
                         nodes: [mobileMenuButton.querySelector('i')],
                     });
@@ -994,5 +989,6 @@
     </script>
 </body>
 </html>
+
 
 
